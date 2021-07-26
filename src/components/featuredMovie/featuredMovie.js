@@ -1,11 +1,11 @@
 import React from 'react'
 import './featuredMovie.css'
 
-export default ({item}) => {
-    const releaseYear = item.first_air_date.split("-")
+export default ({ item }) => {
+    const releaseYear = item.first_air_date ? item.first_air_date.split("-") : "2019"
     const allGenres = []
     for (let i in item.genres) {
-        allGenres.push(item.genres[i].name) 
+        allGenres.push(item.genres[i].name)
     }
 
     return (
@@ -15,7 +15,7 @@ export default ({item}) => {
             backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
         }}>
             <div className="featured--vertical">
-                <div className="featured--horizontal">  
+                <div className="featured--horizontal">
                     <div className="featured--name">
                         {item.original_name}
                     </div>
@@ -28,13 +28,14 @@ export default ({item}) => {
                         {item.overview}
                     </div>
                     <div className="buttons">
-
+                        <a className="feature--watch-button" href={`watch/${item.id}`}>► Assistir</a>
+                        <a className="featured--add-list" href={`list/add/${item.id}`}>+ Minha lista </a>
                     </div>
                     <div className="featured--genres">
                         <strong>Gêneros:</strong> {allGenres.join(', ')}
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </section>
     )
 }
