@@ -14,38 +14,46 @@ export default {
       {
         slug: 'originals',
         title: 'Originais do Netflix',
-        item: await findData(`/discover/tv?wich_network=213&language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/discover/tv?wich_network=213&language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'trending',
         title: 'Recomendados',
-        item: await findData(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'toprated',
         title: 'Em alta',
-        item: await findData(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'action',
         title: "Ação",
-        item: await findData(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'comedy',
         title: "Comédia",
-        item: await findData(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'romance',
         title: "Romance",
-        item: await findData(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
       },
       {
         slug: 'horror',
         title: "Terror",
-        item: await findData(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
+        items: await findData(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
       },
     ]
+  },
+
+  getMovieInfo: async (moveId, type) => {
+    if (moveId) {
+      const request = type === "movie" ? `/movie/${moveId}?language=pt-BR&api_key=${API_KEY}` : `/tv/${moveId}?language=pt-BR&api_key=${API_KEY}`
+      const info = await findData(request)
+      return info
+    }
   }
 }
