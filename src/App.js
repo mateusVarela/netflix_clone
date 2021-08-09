@@ -24,7 +24,7 @@ export default () => {
     }
     loadAll()
   }, [])
-  
+
   useEffect(() => {
     const scrollListener = () => {
       window.scrollY > 15 ? setBlackHeader(true) : setBlackHeader(false)
@@ -39,13 +39,18 @@ export default () => {
 
   return (
     <div className="page">
-      <Header black={blackHeader}/>
+      <Header black={blackHeader} />
       {featuredData && <FeaturedMovie item={featuredData} />}
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
-    </div>
+      <footer>
+        Desenvolvido por <span style={{ fontWeight: "bold" }}>Mateus Varela</span><br />
+        Direitos de imagem para Netflix <br />
+        Dados pegos do site TheMovieDB.org <br />
+      </footer>
+    </div >
   );
 }
