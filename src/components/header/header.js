@@ -2,7 +2,6 @@ import React from "react";
 import "./header.css"
 
 export default ({black}) => {
-    console.log(black);
     return (
         <header className={black ? "black" : ''}>
             <div className="header--logo">
