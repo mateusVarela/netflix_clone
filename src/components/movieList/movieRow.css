@@ -35,16 +35,8 @@
 .movieRow--right {
   position: absolute;
   width: 40px;
-  height: 270px;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
+
   opacity: 0;
-  transition: all ease 0.5s;
 }
 
 .movieRow--left {
@@ -60,18 +52,33 @@
   opacity: 1;
 }
 
+.alice-carousel__prev-btn,
 .alice-carousel__next-btn {
   position: absolute;
-  left: 0;
   top: 45px;
   width: auto;
   font-size: 70px;
+  height: 270px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .alice-carousel__prev-btn {
-  position: absolute;
+  left: 0;
+}
+
+.alice-carousel__next-btn {
   right: 0;
-  top: 45px;
-  width: auto;
-  font-size: 70px;
+}
+
+.movieRow:hover .alice-carousel__next-btn,
+.movieRow:hover .alice-carousel__prev-btn {
+  opacity: 1;
 }
