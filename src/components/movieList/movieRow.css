@@ -55,7 +55,7 @@
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
   position: absolute;
-  top: 45px;
+  top: 15px;
   width: auto;
   font-size: 70px;
   height: 270px;
@@ -81,4 +81,8 @@
 .movieRow:hover .alice-carousel__next-btn,
 .movieRow:hover .alice-carousel__prev-btn {
   opacity: 1;
+}
+
+.alice-carousel__dots {
+  display: none;
 }

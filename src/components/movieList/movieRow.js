@@ -19,7 +19,7 @@ export default ({ title, items }) => {
       </h2>
       <div className="movieList--listArea">
         <div className="movieRow--list">
-          <AliceCarousel autoWidth infinite keyboardNavigation items={card} />
+          <AliceCarousel swipeExtraPadding={600} autoWidth infinite keyboardNavigation items={card} />
         </div>
       </div>
     </div>
