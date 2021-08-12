@@ -16,7 +16,7 @@ Para buscar informações de filmes e séries presentes no Netflix, foi realizad
 - Recomendar um filme **principal**.
 - Criar listas com **recomendações de filmes**.
 - Criar listas de **gênero** de filmes.
-- Criar um **carrosel** para mostrar os filmes de cada gênero.
+- Criar um **carrossel** para mostrar os filmes de cada gênero.
 
 ---
 
