@@ -10,7 +10,7 @@
 
 Bom, sem muita enrolação, o desafio aqui era clonar a tela inicial do nosso queridissímo **Netflix** e implementar algumas funcionalidades.
 
-Para buscar informações de filmes e séries presentes no Netflix, foi realizada consulta em uma **API** chamada [themoviedb](https://www.themoviedb.org/?language=pt-BR) que retorna informações sobre os filmes/séries.
+Para buscar informações de filmes e séries presentes no Netflix, foi realizada consulta em uma **API** chamada [themoviedb](https://www.themoviedb.org/?language=pt-BR), que retorna informações sobre os filmes/séries.
 
 ✅ CA
 - Recomendar um filme **principal**.
