@@ -4,7 +4,7 @@
 
 - ReactJS
 - JavaScript
-- Alice Caroulsel
+- Alice Carousel
 
 ## 🎯 DESAFIO
 
